@@ -4,7 +4,7 @@ from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.utilities import ArxivAPIWrapper, WikipediaAPIWrapper
 from langchain_community.tools import ArxivQueryRun, WikipediaQueryRun
 from langchain_community.tools.ddg_search.tool import DuckDuckGoSearchRun
-
+from langchain.agents import initialize_agent, AgentType
 # 1. Safe wrapper
 class SafeDuckDuckGo(DuckDuckGoSearchRun):
     def _run(self, query: str) -> str:
